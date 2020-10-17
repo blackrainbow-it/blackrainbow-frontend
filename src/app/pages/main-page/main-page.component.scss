@@ -1,0 +1,12 @@
+.micButton {
+    border-radius: 5em;
+    border: 0.5em solid white;
+    min-height: 5em;
+    min-width: 5em;
+    transform: translateY(-2em);
+}
+
+.micButton span {
+    padding-top: 0.3em;
+    font-size: 2.5em;
+}
