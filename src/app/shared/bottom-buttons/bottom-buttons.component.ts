@@ -11,5 +11,4 @@ export class BottomButtonsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
