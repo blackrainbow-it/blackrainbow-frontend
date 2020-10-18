@@ -23,8 +23,8 @@ const routes: Routes = [
     component: NavigationPageComponent
   },
   {
-    path:'**',
-    redirectTo:'main'
+    path: '**',
+    redirectTo: 'main'
   }
 ];
 

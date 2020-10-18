@@ -26,7 +26,7 @@ export class DigitalEyePageComponent implements OnInit, AfterViewInit {
 
   }
 
-  public videoFoo() {
+  public videoFoo(): void {
     this.context = this.canvas.nativeElement.getContext('2d');
 
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
@@ -47,12 +47,11 @@ export class DigitalEyePageComponent implements OnInit, AfterViewInit {
     }
   }
 
-  public takePicture() {
+  public takePicture(): void {
     if (!this.video.nativeElement.paused && !this.video.nativeElement.ended) {
       this.context.drawImage(this.video.nativeElement, 0, 0);
-      const data = this.canvas.nativeElement.toDataURL().split("base64,")[1];
+      const data = this.canvas.nativeElement.toDataURL().split('base64,')[1];
       this.visionService.postImage(data);
-
       // setTimeout(this.takePicture, 5000); // drawing at (1/5)fps
     }
   }

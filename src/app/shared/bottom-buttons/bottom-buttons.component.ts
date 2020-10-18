@@ -13,7 +13,7 @@ export class BottomButtonsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public goBack() {
+  public goBack(): void {
     this.router.navigate(['main']);
   }
 }

@@ -35,7 +35,6 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     NoopAnimationsModule,
     LayoutModule,
     MatToolbarModule,
