@@ -11,7 +11,7 @@ export class ShoppingListPageComponent implements OnInit, AfterViewInit {
 
   constructor(private readonly modalService: NgbModal) { }
 
-  public items = ['Milch', 'Brot', 'Nudeln'];
+  public items = ['Milch', 'Nudeln'];
 
   public openDialog(): void {
     const heading = 'Demo';
@@ -33,7 +33,7 @@ export class ShoppingListPageComponent implements OnInit, AfterViewInit {
     systemReply.load();
     userPrompt.play();
     userPrompt.onended = () => {
-      this.items = this.items.filter(x => x !== 'Brot');
+      this.items.push('Brot');
       setTimeout(() => systemReply.play(), 600);
     };
   }
