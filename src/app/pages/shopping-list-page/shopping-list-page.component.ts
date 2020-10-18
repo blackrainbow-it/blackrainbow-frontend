@@ -22,6 +22,7 @@ export class ShoppingListPageComponent implements OnInit, AfterViewInit {
     dialogRef.componentInstance.data = { heading, body, closebutton };
 
     dialogRef.result.then(_ => this.startDemo(), _ => { });
+
   }
 
   public startDemo(): void {
