@@ -8,7 +8,9 @@ import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 
 export class DemoModalComponent implements OnInit {
-  data = {'heading': 'Scenario', 'body': 'Click begin to start the demo', 'closebutton': 'begin'}
+
+  public data = { heading: 'Scenario', body: 'Click begin to start the demo', closebutton: 'begin' };
+
   constructor(public activeModal: NgbActiveModal) { }
 
   ngOnInit(): void {

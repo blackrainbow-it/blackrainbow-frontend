@@ -24,7 +24,7 @@ export class MainPageComponent implements OnInit {
     link: 'navigation'
   }];
 
-  public select(link: string) {
+  public select(link: string): void {
     this.router.navigate([link]);
   }
 
