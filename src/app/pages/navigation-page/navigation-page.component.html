@@ -1,13 +1,18 @@
-<div class="bg-primary text-white m-1 text-center">Navigation</div>
-<div class="d-flex einkaufsliste h-100" >
-	<div class="d-flex bg-primary text-white m-1 ml-2 mr-2 p-3  align-items-center justify-content-center flex-fill">
-			<span hidden="true" id ="ahead" class="material-icons blink_me arrow">arrow_upward </span>
-			<span hidden="true" id ="right" class="material-icons blink_me arrow">arrow_forward </span>
-			<span hidden="true" id ="left"class="material-icons blink_me arrow">arrow_back </span>
-			<span hidden="true" id ="success" class="material-icons arrow">check_circle </span>
+<div class="d-flex flex-column flex-fill justify-items-between h-100">
+	<div class="d-flex flex-fill flex-column">
+		<h1 class="bg-primary text-white m-0 p-3 text-center">Navigation</h1>
+
+		<div class="d-flex einkaufsliste flex-fill">
+			<div class="d-flex bg-primary text-white m-3 p-3 align-items-center justify-content-center w-100">
+				<span [hidden]="aheadHidden" class="material-icons blink_me arrow">arrow_upward </span>
+				<span [hidden]="rightHidden" class="material-icons blink_me arrow">arrow_forward </span>
+				<span [hidden]="leftHidden" class="material-icons blink_me arrow">arrow_back </span>
+				<span [hidden]="successHidden" class="material-icons arrow">check_circle </span>
+			</div>
+		</div>
+	</div>
+	<div class="">
+		<app-bottom-buttons></app-bottom-buttons>
 	</div>
 
-</div>
-<div style="bottom: 0; position: absolute;width: 100%">
-	<app-bottom-buttons></app-bottom-buttons>
 </div>
