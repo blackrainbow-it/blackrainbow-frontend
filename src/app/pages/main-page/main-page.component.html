@@ -1,6 +1,24 @@
 <div class="d-flex flex-column flex-fill h-100">
-<div> Kaufland-Logo here </div>
-<div class="bg-primary text-white m-1 text-center flex-fill">Digitales Auge</div>
-<div class="bg-primary text-white m-1 text-center flex-fill">Einkaufsliste</div>
-<div class="bg-primary text-white m-1 text-center flex-fill">Navigation</div>
+    <img class="align-self-center w-50 p-2" src="/assets/images/kaufland.svg">
+
+    <div *ngFor="let item of items" style="cursor: pointer;" (click)="select(item.link)"
+        class="d-flex bg-primary text-white m-1 ml-2 mr-2 p-3  align-items-center justify-content-center flex-fill">
+        <span class="d-flex flex-column">
+            <span class="align-self-center material-icons" style="font-size: 4rem">
+                {{item.icon}}
+            </span>
+            <h1 class="row mb-0 d-flex justify-content-center">
+                {{item.text}}
+            </h1>
+        </span>
+    </div>
+
+    <div class="d-flex flex-column m-0 w-100 align-self-end bg-primary"
+        style="height: 5.5em; border-top: 2em white solid; ">
+        <div class="d-flex justify-content-center bg-dark align-self-center micButton">
+            <span class="d-flex justify-content-center h-100 w-100 text-white material-icons">
+                keyboard_voice
+            </span>
+        </div>
+    </div>
 </div>

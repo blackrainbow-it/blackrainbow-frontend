@@ -18,6 +18,8 @@ import { DigitalEyePageComponent } from './pages/digital-eye-page/digital-eye-pa
 import { ShoppingListPageComponent } from './pages/shopping-list-page/shopping-list-page.component';
 import { NavigationPageComponent } from './pages/navigation-page/navigation-page.component';
 import { BottomButtonsComponent } from './shared/bottom-buttons/bottom-buttons.component';
+import { CloudVisionServiceService } from './services/cloud-vision-service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { BottomButtonsComponent } from './shared/bottom-buttons/bottom-buttons.c
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     NoopAnimationsModule,
     LayoutModule,
@@ -41,7 +44,7 @@ import { BottomButtonsComponent } from './shared/bottom-buttons/bottom-buttons.c
     MatIconModule,
     MatListModule,
   ],
-  providers: [],
+  providers: [CloudVisionServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
